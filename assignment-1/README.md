@@ -48,7 +48,7 @@ npm run dev
 ## API Endpoints
 
 | Method   | Endpoints                  | Description              |
-|------------------ |-------------------|--------------------------|
+|----------|----------------------------|--------------------------|
 | POST     | /transactions              | Create a new transaction |
 | GET      | /transactions              | Get all transactions     |
 | GET      | /transactions/:id          | Get transaction by ID    |
@@ -66,5 +66,15 @@ POST /transactions
   "type": "income",
   "amount": 1000,
   "description": "Salary",
+}
+Response:
+{
+  "_id": "63a...",
+  "type": "income",
+  "amount": 1000,
+  "description": "Salary",
+  "date": "2025-12-18T00:00:00.000Z",
+  "isDeleted": false,
+  "__v": 0
 }
 ```
