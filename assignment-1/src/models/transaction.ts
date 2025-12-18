@@ -1,7 +1,7 @@
 import { Document, model, Schema } from "mongoose";
 
 export interface TransactionType extends Document{
-    type:"income" | "expense",
+    type:"income" | "expense" ,
     amount:number,
     description:string,
     date:Date,
