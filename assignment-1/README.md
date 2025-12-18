@@ -63,11 +63,12 @@ npm run dev
 POST /transactions
 ```json
 {
-  "type": "income",
+    "type": "income",
   "amount": 1000,
   "description": "Salary",
 }
 ```
+```json
 Response:
 {
   "_id": "63a...",
