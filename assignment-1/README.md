@@ -26,21 +26,45 @@ npm run dev
 
 ## Design Decisions
 
-Soft Delete:
+1. Soft Delete:
 - Instead of permanently deleting transactions, we use an isDeleted boolean field.
 - This allows restoring deleted transactions later.
 
-Partial Update with PATCH:
+2. Partial Update with PATCH:
 - Use PATCH to update only the fields provided in the request body.
 - More flexible than PUT which would require all fields.
 
-Validation:
+3. Validation:
 - type must be "income" or "expense".
 - amount must be a positive number.
 
 
-Filtering:
+4. Filtering:
 - GET /transactions supports filtering by type query param.
 - Soft deleted transactions are automatically excluded.
 
 ---
+
+## API Endpoints
+
+| Method   | Endpoints                  | Description              |
+|------------------ |-------------------|--------------------------|
+| POST     | /transactions              | Create a new transaction |
+| GET      | /transactions              | Get all transactions     |
+| GET      | /transactions/:id          | Get transaction by ID    |
+| PUT      | /transactions/:id          | Update Transaction       |
+| DELETE   | /transactions/:id          | Soft delete transaction  |
+| PATCH    | /transactions/:id/restore  | Restore transaction      |
+
+---
+
+### Example: Create Transaction
+
+POST /transactions
+```json
+{
+  "type": "income",
+  "amount": 1000,
+  "description": "Salary",
+}
+```
