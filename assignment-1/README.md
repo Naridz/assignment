@@ -67,6 +67,7 @@ POST /transactions
   "amount": 1000,
   "description": "Salary",
 }
+```
 Response:
 {
   "_id": "63a...",
