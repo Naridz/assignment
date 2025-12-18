@@ -68,8 +68,8 @@ POST /transactions
   "description": "Salary",
 }
 ```
-```json
 Response:
+```json
 {
   "_id": "63a...",
   "type": "income",
