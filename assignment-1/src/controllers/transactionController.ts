@@ -114,4 +114,4 @@ export const restoreTransaction = async (req: Request, res: Response) => {
     console.log(error);
     res.status(500).json({ message: "Server error" });
   }
-};
+}
